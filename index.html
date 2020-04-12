@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+    <div class="outer" id="app">
+        
+        <router-view></router-view>
+        
+        
+    </div>
+
+    <script type="module">
+        import { chat } from "./js/chat.js";
+        import { list } from "./js/list.js";
+        import { find } from "./js/find.js";
+        import { mine } from "./js/mine.js";
+        import { main } from "./js/main.js";
+        import { mess } from "./js/mess.js";
+        import { material } from "./js/material1.js";
+        import { circle } from "./js/circle.js";
+        import { self } from "./js/self.js";
+
+
+        let router = new VueRouter({
+            routes: [
+                {
+                    path: "/",
+                    redirect: "/four"
+                },
+                {
+                    path: "/four",
+                    component:main,
+                    redirect:"/four/a",
+                    children:[
+                        {
+                            path: "a",
+                            component:chat,
+                        },
+                        {
+                            path: "b",
+                            component:list,
+                        },
+                        {
+                            path: "c",
+                            component:find,
+                        },
+                        {
+                            path: "d",
+                            component:mine,
+                        },
+                    ]
+                },
+                {
+                    path:"/message",
+                    component:mess
+                },
+                {
+                    path:"/material",
+                    component:material
+                },
+                {
+                    path:"/circle",
+                    component:circle
+                },
+                {
+                    path:"/self",
+                    component:self
+                }
+            ],
+            linkActiveClass:"green"
+        })
+
+
+        let app = new Vue({
+            el: "#app",
+            data: {
+
+            },
+            router:router
+        })
+    </script>
+</body>
+</html>

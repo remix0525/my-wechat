@@ -1,0 +1,648 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+a{
+    display: block;
+    color:black;
+    text-decoration: none;
+}
+
+.outer {
+    width: 100%;
+    height: 667px;
+    background-color: rgb(241, 240, 239);
+    overflow: hidden;
+    position: relative;
+}
+
+.choose {
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    position: absolute;
+    top: 600px
+}
+
+.choose > a {
+    flex: 1;
+    text-align: center;
+    height:67px;
+    margin-top: 10px;
+}
+
+.choose > a div {
+    font-size: 26px;
+}
+
+.choose > a span {
+    font-size: 12px;
+}
+
+.green {
+    color: #07c160;
+}
+
+/* a页面的css */
+.title {
+    position: relative;
+}
+
+.title p {
+    width: 100%;
+    height: 66px;
+    line-height: 66px;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.title div {
+    position: absolute;
+    right: 20px;
+    top: 21px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.input-wrap{
+    width:100%;
+    padding:0 10px
+}
+.search-input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 6px;
+}
+
+.search-input::-webkit-input-placeholder {
+    color: #7e7f81;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.chat {
+    margin-top: 10px;
+    background: white;
+    overflow: auto;
+    width: 100%;
+    height: 489px;
+}
+
+.chat-item {
+    display: flex;
+}
+
+.chat-item .thumb {
+    height: 64px;
+    width: 64px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.chat-item .thumb img {
+    width: 44px;
+    height: 44px;
+    border-radius: 5px;
+}
+
+.chat-item-con {
+    position: relative;
+    height: 64px;
+    flex: 1;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.chat-item-con-name {
+    position: absolute;
+
+}
+
+.chat-item-con-text {
+    position: absolute;
+    color: #999;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+}
+
+.chat-item-con-time {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #999;
+    font-size: 12px;
+}
+
+.chat-item-con-listen {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    color: #999;
+    font-size: 12px;
+}
+/* b页面的css */
+.list-wrap{
+    height:600px;
+    overflow: auto;
+}
+.logo-wrap {
+    margin-top: 10px;
+    /* margin-bottom: 10px; */
+    width: 100%;
+    background: white;
+}
+
+.logo-item {
+    display: flex;
+}
+
+.logo {
+    font-size: 18px;
+    margin: 0 10px;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 10px 10px 10px 20px;
+}
+
+.intri {
+    font-size: 16px;
+    height: 52px;
+    padding: 10px;
+    line-height: 36px;
+    border-bottom: 1px solid rgb(243, 241, 241);
+    flex: 1;
+}
+
+.friend-A {
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 22px;
+    color: #7e7f81
+}
+
+.friend-item {
+    background: white;
+    display: flex;
+}
+
+.friend-logo img {
+    width: 34px;
+    height: 34px;
+    margin: 10px 10px 10px 20px;
+    border-radius: 5px;
+}
+
+.friend-intri {
+    font-size: 16px;
+    height: 54px;
+    line-height: 54px;
+    width: 100%;
+    margin-left: 10px;
+    border-bottom: 1px solid rgb(233, 231, 231);
+}
+.friend .friend-item:last-of-type .friend-intri:last-of-type {
+    border-bottom: none;
+}
+.orange {
+    background: #f79c48;
+    color: white;
+}
+
+.lv {
+    background: #15c162;
+    color: white;
+}
+
+.blue1 {
+    background: #2187ee;
+    color: white;
+}
+
+.blue2 {
+    background: #1e87ea;
+    color: white;
+}
+
+.line {
+    border-bottom: none;
+}
+.margin-bottom {
+    margin-bottom: 10px;
+}
+/* c页面的css */
+.find-item {
+    display: flex;
+    background: white;
+    width: 100%;
+}
+
+.find-con {
+    display: flex;
+}
+
+.find-logo {
+    padding: 10px;
+    font-size: 28px;
+    color: #8fc42c;
+}
+
+.find-con {
+    position: relative;
+    padding: 10px;
+    /* border-bottom: 1px solid red; */
+    flex: 1
+}
+
+.find-name {
+    font-size: 16px;
+    line-height: 34px;
+    height: 34px;
+}
+
+.find-thumb img {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    right: 50px
+}
+
+.find-right {
+    position: absolute;
+    font-size: 20px;
+    top: 16px;
+    right: 15px;
+    color: rgb(156, 153, 153)
+}
+
+.blue3 {
+    color: rgb(71, 124, 221)
+}
+
+.blue4 {
+    color: rgb(40, 111, 243)
+}
+
+.yello {
+    color: rgb(211, 211, 14);
+}
+
+.red {
+    color: rgb(231, 104, 104)
+}
+.under-line {
+    border-bottom: 1px solid rgb(236, 234, 234);
+}
+/* d页面的css */
+.photo {
+    padding: 20px;
+    text-align: right;
+    font-size: 28px;
+    background: white;
+}
+
+.mine-head {
+    width: 100%;
+    padding: 10px 0px 35px 10px;
+    background-color: white;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.mine-head img {
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    margin-left: 15px;
+}
+
+.wechat-name {
+    height: 64px;
+    /* border:1px solid red; */
+    width: 100%;
+    margin-left: 15px;
+    position: relative;
+    /* margin-bottom:20px */
+}
+
+.wechat-name-1 {
+    position: absolute;
+    top: 0px;
+    font-size: 20px;
+}
+
+.wechat-name-2 {
+    position: absolute;
+    bottom: 0px;
+    font-size: 18px;
+    color: rgb(124, 123, 123)
+}
+
+.wechat-name-3 {
+    position: absolute;
+    bottom: 2px;
+    right: 40px;
+    font-size: 16px;
+    color: rgb(124, 123, 123)
+}
+
+.wechat-name-4 {
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+    font-size: 20px;
+    color: rgb(124, 123, 123)
+}
+/* 这是聊天页面 */
+.message-wrap{
+    display: flex;
+    flex-direction: column;
+}
+.message {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    line-height:50px;
+    height:50px;
+    margin-top:10px;
+    position: relative;
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+.message .left{
+    position: absolute;
+    left:20px;
+    top:0;
+    font-size: 22px;
+}
+
+.message .elli{
+    position: absolute;
+    right:20px;
+    top:0;
+    font-size: 22px;
+}
+
+.say{
+    height:540px;
+    flex-grow: 1;
+    overflow: auto;
+}
+.say > div{
+    display: flex;
+    align-items: flex-start;
+    padding:15px;
+    
+}
+.say div img{
+    width:48px;
+    height:48px;
+    border-radius: 5px;
+}
+.you{
+    position: relative;
+}
+.you p{
+    background: white;
+    border-radius: 5px ;
+    margin-left: 20px;
+    padding:8px
+}
+.you .triangle{
+    position: absolute;
+    top:25px;
+    left:63px;
+    border:10px solid white;
+    border-top:10px solid transparent;
+    border-left:10px solid transparent;
+    border-bottom:10px solid transparent;
+    width:0px;
+    height:0px
+    
+}
+.me{
+    position: relative;
+}
+/* .me img{
+    position: absolute;
+    right:0px
+} */
+.me p{
+    background: #89d951;
+    border-radius: 5px ;
+    margin-right: 20px;
+    padding:8px
+}
+.me .triangle{
+    position: absolute;
+    top:25px;
+    right:63px;
+    border:10px solid #89d951;
+    border-top:10px solid transparent;
+    border-right:10px solid transparent;
+    border-bottom:10px solid transparent;
+    width:0px;
+    height:0px
+}
+.send{
+    height:67px;
+    display: flex;
+    padding:10px;
+    /* border:1px solid red */
+    align-items: center;
+    border-top:1px solid rgb(216, 213, 213);
+}
+.send input{
+    flex:1;
+    margin:0 3px;
+    height:35px;
+    border-radius: 5px;
+    border:1px solid rgb(233, 232, 232);
+}
+.send span{
+    font-size: 30px;
+    margin:0 3px
+}
+/* 通讯录朋友信息 */
+/* .material{
+    padding:20px;
+    background: white;
+} */
+.blue5{
+    color:rgb(3, 3, 73)
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    height:60px;
+    line-height:60px;
+    padding:20px;
+    background: white;
+}
+.header div{
+    font-size: 20px;
+}
+.material-intri{
+    display: flex;
+    border-bottom: 1px solid #dddada;
+    padding:20px 20px 50px 20px;
+    background: white;
+}
+.material-intri img{
+    width:64px;
+    height:64px;
+    border-radius: 5px;
+    margin: 0 10px;
+    
+}
+.name1{
+    font-size: 22px;
+    margin-bottom: 3px;
+}
+.name2{
+    font-size: 14px;
+    color:#666
+}
+.name3{
+    font-size: 14px;
+    color:#666
+}
+.adress{
+    font-size: 14px;
+    color:#666
+}
+.material-mess{
+    height:60px;
+    line-height:60px;
+    font-size: 18px;
+    color:rgb(68, 67, 67);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dddada;
+    background: white;
+    padding:0 20px
+}
+.bottom{
+   border-bottom: none;
+   margin-bottom: 10px;
+}
+.material-mess2{
+    text-align: center;
+    font-size: 18px;
+    height:60px;
+    line-height:60px;
+    background: white;
+    border-bottom: 1px solid #dddada;
+}
+.friend-circle{
+    position: relative;
+}
+/* .friend-circle:first-child{
+    background: black;
+    height:300px;
+    margin-bottom:40px
+} */
+.icon-title{
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    background: black;
+    height:300px;
+    margin-bottom:40px
+}
+.icon-title div{
+    color: white;
+    font-size: 24px;
+}
+.circle-name img{
+    width:64px;
+    height:64px;
+    position: absolute;
+    right:20px;
+    top:268px;
+    border-radius: 5px;
+}
+.circle-name .xianyadan{
+    position: absolute;
+    right:100px;
+    top:270px;
+    color:white;
+    font-size: 18px;
+}
+.con{
+    padding:15px;
+    display: flex;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+.con img{
+    width:50px;
+    height:50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.huniu{
+    color:rgb(2, 2, 53)
+}
+.con .circle-thumb{
+    width:200px;
+    height:200px;
+    border-radius: 0px;
+}
+/* zuihouyigeyemian */
+.self-title {
+    position: relative;
+}
+.self-title p{
+    text-align: center;
+    margin-top:10px;
+    height:60px;
+    line-height:60px;
+    font-size: 20px;
+}
+.self-title div{
+    position: absolute;
+    left:20px;
+    top:20px;
+    font-size: 20px;
+}
+.self-item1{
+    display: flex;
+    padding:10px 20px;
+    align-items: center;
+    border-bottom: 1px solid #dddada;
+    justify-content: space-between;
+    background: white;
+}
+.self-item1-name{
+    font-size:18px
+}
+.self-item1-thunb{
+    display: flex;
+    align-items: center;
+}
+.self-item1 img{
+    width:55px;
+    height:55px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.self-item2{
+    display: flex;
+    padding:0px 20px;
+    font-size: 18px;
+    height:60px;
+    line-height:60px;
+    justify-content: space-between;
+    border-bottom: 1px solid #dddada;
+    background: white;
+}
+.self-item2-con{
+    color:#666
+}
